@@ -1,0 +1,110 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Like {
+  userId: String!
+  postId: String!
+  users: User!
+}
+
+type Posts {
+  id: String!
+  header: String
+  description: String
+  images: [String!]
+  user: User!
+  likes: [Like!]!
+  comments: [Comments!]!
+}
+
+type Comments {
+  userId: String!
+  postId: String!
+  comment: String
+  image: String
+  user: User!
+}
+
+type Follow {
+  followerId: String!
+  followingId: String!
+}
+
+type User {
+  id: String!
+  username: String!
+  name: String!
+  email: String!
+  password: String!
+  image: String
+  gender: Gender!
+  following: [User!]!
+  followers: [User!]!
+  posts: [Posts!]!
+}
+
+enum Gender {
+  Male
+  Female
+}
+
+type LoginResponse {
+  accessToken: String!
+  user: User!
+}
+
+type Query {
+  Users: [User!]!
+  getUser(username: String!): User!
+  getPosts: [Posts!]!
+  getPost(id: String!): Posts!
+  getFollowers: [Follow!]!
+  getLikes(postId: String!): [Like!]!
+  getComments(postId: String!): [Comments!]!
+  getComment(id: String!): Comments!
+}
+
+type Mutation {
+  signup(input: signupInput!): User!
+  login(input: loginInput!): LoginResponse!
+  updatePassword(input: UpdatePass!): User!
+  deleteUser: Boolean!
+  updateUserInfo(input: UpdateInfo!, file: Upload): User!
+  addPost(header: String!, description: String!, files: [Upload!]): Posts!
+  updatePost(id: String!, header: String, description: String, files: [Upload!], oldImages: [String!]): Posts!
+  deletePost(id: String!): Boolean!
+  follow(userId: String!): Follow!
+  unfollow(userId: String!): String!
+  addLike(postId: String!): Like!
+  removeLike(postId: String!): String!
+  addComment(postId: String!, comment: String, file: Upload): Comments!
+  editComment(id: String!, comment: String, file: Upload): Comments!
+  deleteComment(id: String!): Boolean!
+}
+
+input signupInput {
+  username: String!
+  name: String!
+  email: String!
+  password: String!
+}
+
+input loginInput {
+  email: String!
+  password: String!
+}
+
+input UpdatePass {
+  currentPassword: String!
+  newPassword: String!
+}
+
+input UpdateInfo {
+  username: String
+  name: String
+  email: String
+}
+
+"""The `Upload` scalar type represents a file upload."""
+scalar Upload
