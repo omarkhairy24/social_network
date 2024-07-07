@@ -62,4 +62,5 @@ This project is a Social Network API built with GraphQL, NestJS, and Sequelize. 
       Start the production server:
         npm start
 
-
+## DataLoader
+    This API uses Dataloader to optimize and batch database requests, reducing the number of queries and improving performance.
