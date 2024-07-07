@@ -27,10 +27,12 @@ Remove Comment: Delete a comment.
 
 ## Getting Started
 ### Prerequisites
-
     Node.js
     npm
     PostgreSQL
+    nest.js
+    sequelize
+    graphql
 ## Installation
   ### Clone the repository:
     git clone https://github.com/yourusername/social-network-api.git
