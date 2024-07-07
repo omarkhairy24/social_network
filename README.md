@@ -3,27 +3,32 @@ This project is a Social Network API built with GraphQL, NestJS, and Sequelize. 
 
 ## Features
 ### Authentication
-Signup: Create a new user account.
-Login: Authenticate an existing user.
-Update Password: Change the user's password.
-Update User: Modify user details.
-Get User: Retrieve user information.
+    Signup: Create a new user account.
+    
+    Login: Authenticate an existing user.
+    
+    Update Password: Change the user's password.
+    
+    Update User: Modify user details.
+    
+    Get User: Retrieve user information.
+
 ### Post
-Add Post: Create a new post.
-Update Post: Edit an existing post.
-Delete Post: Remove a post.
-View Posts: Retrieve a list of posts.
-View Single Post: Retrieve details of a specific post.
+    Add Post: Create a new post.
+    Update Post: Edit an existing post.
+    Delete Post: Remove a post.
+    View Posts: Retrieve a list of posts.
+    View Single Post: Retrieve details of a specific post.
 ### Follow
-Follow User: Follow another user.
-Unfollow User: Unfollow a user.
+    Follow User: Follow another user.
+    Unfollow User: Unfollow a user.
 ### Like
-Add Like: Like a post.
-Remove Like: Unlike a post.
+    Add Like: Like a post.
+    Remove Like: Unlike a post.
 ### Comments
-Add Comment: Comment on a post.
-Update Comment: Edit an existing comment.
-Remove Comment: Delete a comment.
+    Add Comment: Comment on a post.
+    Update Comment: Edit an existing comment.
+    Remove Comment: Delete a comment.
 
 ## Getting Started
 ### Prerequisites
@@ -52,9 +57,9 @@ Remove Comment: Delete a comment.
     npx sequelize-cli db:migrate
 
   ### Running the APIRunning the API
-  Start the development server:
-    npm run start:dev
-  Start the production server:
-    npm start
+      Start the development server:
+        npm run start:dev
+      Start the production server:
+        npm start
 
 
